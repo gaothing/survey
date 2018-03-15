@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width">
-		<link rel="stylesheet" href="https://github.com/gaothing/music/blob/master/css/work.css">
+		<!--<link rel="stylesheet" href="https://github.com/gaothing/music/blob/master/css/work.css">-->
 		<title>痘博士调查问卷</title>
 	</head>
 	<style type="text/css">
@@ -50,6 +50,7 @@
 		input {
 			border: none;
 			border-bottom: 1px solid #999;
+			outline: none;
 		}
 		
 		.us {
@@ -82,11 +83,11 @@
 			top: 8px;
 			width: 18px;
 			height: 18px;
-			border: 1px solid #EFEFEF;
+			border: 1px solid #B5B5B5;
 		}
 		
 		.list li .choosed {
-			border: 5px solid #CCCCFF;
+			border: 5px solid #3367D6;
 		}
 		
 		.btn {
@@ -94,7 +95,7 @@
 			height: 40px;
 			text-align: center;
 			line-height: 40px;
-			background: #CCCCFF;
+			background: #3367D6;
 			border-radius: 4px;
 			color: #FFFFFF;
 			margin: 10px auto;
@@ -374,7 +375,23 @@
 		$(this).parent().find("span").text($(this).val()).end().end().val("");
 		data.forEach(function(v, i) {
 			if(i == self.parent().parent().parent().index()) {
-				newData.push(self.parent().find("span").text())
+				var newObj={}
+					if(self.parent().index()==0){
+						newObj.A=self.find("span").text()
+					}else if(self.parent().index()==1){
+						newObj.B=self.parent().find("span").text()
+					}else if(self.parent().index()==2){
+						newObj.C=self.parent().find("span").text()
+					}else if(self.parent().index()==3){
+						newObj.D=self.parent().find("span").text()
+					}else if(self.parent().index()==4){
+						newObj.E=self.parent().find("span").text()
+					}else if(self.index()==5){
+						newObj.F=self.parent().find("span").text()
+					}else if(self.parent().index()==6){
+						newObj.G=self.parent().find("span").text()
+					}
+				newData.push(newObj)
 			} else {
 				newData.push(v)
 			}
@@ -387,7 +404,23 @@
 			var self = $(this);
 			data.forEach(function(v, i) {
 				if(i == self.parent().parent().index()) {
-					newData.push(self.find("span").text())
+					var newObj={}
+					if(self.index()==0){
+						newObj.A=self.find("span").text()
+					}else if(self.index()==1){
+						newObj.B=self.find("span").text()
+					}else if(self.index()==2){
+						newObj.C=self.find("span").text()
+					}else if(self.index()==3){
+						newObj.D=self.find("span").text()
+					}else if(self.index()==4){
+						newObj.E=self.find("span").text()
+					}else if(self.index()==5){
+						newObj.F=self.find("span").text()
+					}else if(self.index()==6){
+						newObj.G=self.find("span").text()
+					}
+					newData.push(newObj)
 				} else {
 					newData.push(v)
 				}
@@ -403,17 +436,20 @@
 				$(".warning").text("*请完善个人信息");
 				alert("*请完善个人信息")
 			} else {
-				data.forEach(function(v, i) {
+				
+				data.every(function(v, i) {
 					if(v == 1) {
 						falg = false;
 						$(".warning").text("*您有题未作答完成")
-						alert("*您有题未作答完成")
+						alert("您有题未作答完成")
+						return false
 					}
+					return true
 				})
 				if(falg) {
-					var res = data.join(",");
+					var res = data;
 					// console.log(username, age, sex);
-					// console.log(res);
+					 console.log(res);
 					$.ajax({
 						url: '',
 						type: 'post',
