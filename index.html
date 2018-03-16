@@ -1,439 +1,611 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width">
-		<link rel="stylesheet" href="https://github.com/gaothing/music/blob/master/css/work.css">
-		<title>痘博士调查问卷</title>
-	</head>
-	<style type="text/css">
-		* {
-			padding: 0;
-			margin: 0;
-			box-sizing: border-box;
-			list-style: none;
-		}
-		
-		html {
-			font-size: 100px;
-		}
-		
-		body {
-			font-size: 16px;
-		}
-		
-		a {
-			text-decoration: none;
-		}
-		
-		img {
-			border: none;
-			vertical-align: middle;
-		}
-		
-		#box {
-			width: 86%;
-			height: 100%;
-			border: 1px solid #EFEFEF;
-			margin: 20px auto;
-			padding: 10px;
-		}
-		
-		h3 {
-			text-align: center;
-		}
-		
-		h4 {
-			font-size: 14px;
-		}
-		
-		input {
-			border: none;
-			border-bottom: 1px solid #999;
-		}
-		
-		.us {
-			margin-top: 10px;
-		}
-		
-		.us span {
-			font-size: 14px;
-		}
-		
-		.list {
-			margin: 10px 0;
-			border-bottom: 1px solid #EFEFEF;
-		}
-		
-		.list li {
-			height: 34px;
-			line-height: 34px;
-			padding-left: 30px;
-			font-size: 14px;
-			font-family: "微软雅黑";
-			cursor: pointer;
-			position: relative;
-		}
-		
-		.list li .choose {
-			border-radius: 50%;
-			position: absolute;
-			left: 0px;
-			top: 8px;
-			width: 18px;
-			height: 18px;
-			border: 1px solid #EFEFEF;
-		}
-		
-		.list li .choosed {
-			border: 5px solid #CCCCFF;
-		}
-		
-		.btn {
-			width: 80px;
-			height: 40px;
-			text-align: center;
-			line-height: 40px;
-			background: #CCCCFF;
-			border-radius: 4px;
-			color: #FFFFFF;
-			margin: 10px auto;
-			cursor: pointer;
-		}
-		
-		p {
-			font-size: 14px;
-			line-height: 40px;
-			text-align: center;
-		}
-		
-		.warning {
-			color: red;
-		}
-		
-		.others {
-			margin-left: 20px;
-		}
-	</style>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width">
+    <!--<link rel="stylesheet" href="https://github.com/gaothing/music/blob/master/css/work.css">-->
+    <title>痘博士调查问卷</title>
+</head>
+<style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        list-style: none;
+    }
 
-	<body>
-		<div id="box">
-			<h3>痘博士调查问卷</h3>
-			<div class="us"><span>姓名：</span><input type="text" name="" id="username" value="" placeholder="输入姓名" /></div>
-			<div class="us"><span>性别：</span><input type="text" name="" id="sex" value="" placeholder="输入性别" /></div>
-			<div class="us"><span>年龄：</span><input type="text" name="" id="age" value="" placeholder="输入年龄" /></div>
-			<ul>
-				<li class="list">
-					<h4>1.您的职业是？</h4>
-					<ul>
-						<li>
-							<div class="choose"></div>A. <span>学生</span></li>
-						<li>
-							<div class="choose"></div>B.<span>公司职员</span></li>
-						<li>
-							<div class="choose"></div>C.<span>自由职业者</span></li>
-						<li>
-							<div class="choose"></div>D.<span>事业单位</span></li>
-						<li>
-							<div class="choose"></div>E.<span>医务人员</span></li>
-						<li>
-							<div class="choose"></div>F.<span>公务员</span></li>
-						<li>
-							<div class="choose"></div>G.<span>其他</span><input type="text" class="others" name="" id="" value="" /></li>
-					</ul>
-				</li>
-				<li class="list">
-					<h4>2.您平时使用手机app吗？</h4>
-					<ul>
-						<li>
-							<div class="choose"></div>A.<span>经常使用</span></li>
-						<li>
-							<div class="choose"></div>B.<span>偶尔使用</span></li>
-						<li>
-							<div class="choose"></div>C.<span>不使用</span></li>
-					</ul>
-				</li>
-				<li class="list">
-					<h4>3.您的智能手机是什么系统？</h4>
-					<ul>
-						<li>
-							<div class="choose"></div>A.<span>Ios</span></li>
-						<li>
-							<div class="choose"></div>B.<span>安卓</span></li>
-						<li>
-							<div class="choose"></div>C.<span>Windows mobil</span></li>
-						<li>
-							<div class="choose"></div>D.<span>塞班</span></li>
-						<li>
-							<div class="choose"></div>E.<span>其他</span></li>
-					</ul>
-				</li>
-				<li class="list">
-					<h4>4.您会网购祛痘产品吗？</h4>
-					<ul>
-						<li>
-							<div class="choose"></div>A.<span>经常需要</span></li>
-						<li>
-							<div class="choose"></div>B.<span>偶尔需要</span></li>
-						<li>
-							<div class="choose"></div>C.<span>有需求购买</span></li>
-						<li>
-							<div class="choose"></div>D.<span>从不需要</span></li>
-					</ul>
-				</li>
-				<li class="list">
-					<h4>5.您平时每月进行几次祛痘？</h4>
-					<ul>
-						<li>
-							<div class="choose"></div>A.<span>1-2次</span></li>
-						<li>
-							<div class="choose"></div>B.<span>3-4次</span></li>
-						<li>
-							<div class="choose"></div>C.<span>5次以上</span></li>
-						<li>
-							<div class="choose"></div>D.<span>不进行</span></li>
-					</ul>
-				</li>
-				<li class="list">
-					<h4>6.您认为您皮肤面临的问题是什么？</h4>
-					<ul>
-						<li>
-							<div class="choose"></div>A.<span>干燥无光泽</span></li>
-						<li>
-							<div class="choose"></div>B.<span>粉刺痘痘多</span></li>
-						<li>
-							<div class="choose"></div>C.<span>出现皱纹</span></li>
-						<li>
-							<div class="choose"></div>D.<span>皮肤松弛无弹性</span></li>
-						<li>
-							<div class="choose"></div>E.<span>有眼袋及黑眼圈</span></li>
-						<li>
-							<div class="choose"></div>F.<span>夏天出油较多</span></li>
-						<li>
-							<div class="choose"></div>G.<span>其它</span><input type="text" class="others" name="" id="" value="" /></li>
-					</ul>
-				</li>
-				<li class="list">
-					<h4><div class="choose"></div>7.您最常使用什么祛痘app产品？</h4>
-					<ul>
-						<li>
-							<div class="choose"></div>A.<span>痘博士</span></li>
-						<li>
-							<div class="choose"></div>B.<span>皮肤宝</span></li>
-						<li>
-							<div class="choose"></div>C.<span>肌肤管家</span></li>
-						<li>
-							<div class="choose"></div>D.<span>播美</span></li>
-						<li>
-							<div class="choose"></div>E.<span>打痘痘</span></li>
-						<li>
-							<div class="choose"></div>F.<span>不使用</span></li>
-						<li>
-							<div class="choose"></div>G.<span>其它</span><input type="text" class="others" name="" id="" value="" /></li>
-					</ul>
-				</li>
-				<li class="list">
-					<h4>8.您为什么使用该祛痘应用？</h4>
-					<ul>
-						<li>
-							<div class="choose"></div>A.<span>应用界面设计好看</span></li>
-						<li>
-							<div class="choose"></div>B.<span>应用操作舒适</span></li>
-						<li>
-							<div class="choose"></div>C.<span>应用分类清晰，能快速找到资源</span></li>
-						<li>
-							<div class="choose"></div>D.<span>一开始就使用，习惯了</span></li>
-						<li>
-							<div class="choose"></div>E.<span>祛痘效果特别好</span></li>
-					</ul>
-				</li>
-				<li class="list">
-					<h4>9.您觉得当先祛痘软件最大的问题是什么？</h4>
-					<ul>
-						<li>
-							<div class="choose"></div>A.<span>耗流量</span></li>
-						<li>
-							<div class="choose"></div>B.<span>占用内存大</span></li>
-						<li>
-							<div class="choose"></div>C.<span>广告多</span></li>
-						<li>
-							<div class="choose"></div>D.<span>个人信息不安全</span></li>
-						<li>
-							<div class="choose"></div>E.<span>祛痘效果不显著</span></li>
-						<li>
-							<div class="choose"></div>F.<span>专家回答问题过慢</span></li>
-					</ul>
-				</li>
-				<li class="list">
-					<h4>10．您每月用于祛痘产品的消费金额是多少？</h4>
-					<ul>
-						<li>
-							<div class="choose"></div>A.<span>200元以内</span></li>
-						<li>
-							<div class="choose"></div>B.<span>200-1000元</span></li>
-						<li>
-							<div class="choose"></div>C.<span>1000-2000元</span></li>
-						<li>
-							<div class="choose"></div>D.<span>2000元以上</span></li>
-					</ul>
-				</li>
-				<li class="list">
-					<h4>11.您觉得痘博士的宣传力度怎么样？</h4>
-					<ul>
-						<li>
-							<div class="choose"></div>A.<span>强</span></li>
-						<li>
-							<div class="choose"></div>B.<span>较强</span></li>
-						<li>
-							<div class="choose"></div>C.<span>一半</span></li>
-						<li>
-							<div class="choose"></div>D.<span>较弱</span></li>
-						<li>
-							<div class="choose"></div>E.<span>弱</span></li>
-					</ul>
-				</li>
-				<li class="list">
-					<h4>12.您认为痘博士最大的优势是什么？</h4>
-					<ul>
-						<li>
-							<div class="choose"></div>A. <span>质量有保证</span> </li>
-						<li>
-							<div class="choose"></div>B.<span>使用后效果比较好</span></li>
-						<li>
-							<div class="choose"></div>C.<span>不清楚</span></li>
-						<li>
-							<div class="choose"></div>D.<span>其他</span><input type="text" class="others" name="" id="" value="" /></li>
-					</ul>
-				</li>
-				<li class="list">
-					<h4>13.您最喜欢的促销方式是什么？</h4>
-					<ul>
-						<li>
-							<div class="choose"></div>A.<span>打折</span></li>
-						<li>
-							<div class="choose"></div>B.<span>积分送礼物</span></li>
-						<li>
-							<div class="choose"></div>C.<span>赠送优惠券</span></li>
-						<li>
-							<div class="choose"></div>D.<span>其他</span></li>
-					</ul>
-				</li>
-				<li class="list">
-					<h4>14.您通过那种渠道了解到痘博士的产品？</h4>
-					<ul>
-						<li>
-							<div class="choose"></div>A.<span>电视广告</span></li>
-						<li>
-							<div class="choose"></div>B.<span>报纸杂志广告</span></li>
-						<li>
-							<div class="choose"></div>C.<span>朋友推荐</span></li>
-						<li>
-							<div class="choose"></div>D.<span>网站</span></li>
-						<li>
-							<div class="choose"></div>E.<span>其他</span></li>
-					</ul>
-				</li>
-				<li class="list">
-					<h4>15.我们痘博士app应该怎样改进？</h4>
-					<ul>
-						<li>
-							<div class="choose"></div>A.<span>增加更有趣的功能点</span></li>
-						<li>
-							<div class="choose"></div>B.<span>产品界面设计更新颖美观</span></li>
-						<li>
-							<div class="choose"></div>C.<span>推出活动进行促销</span></li>
-						<li>
-							<div class="choose"></div>D.<span>其他</span><input type="text" class="others" name="" id="" value="" /></li>
-					</ul>
-				</li>
-			</ul>
-			<div class="btn">提交</div>
-			<p class="warning"></p>
-			<p>真心的感谢您的配合与帮助！</p>
-		</div>
-	</body>
+    html {
+        font-size: 100px;
+    }
 
+    body {
+        font-size: 16px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    img {
+        border: none;
+        vertical-align: middle;
+    }
+
+    #box {
+        width: 86%;
+        height: 100%;
+        border: 1px solid #EFEFEF;
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    h4 {
+        font-size: 14px;
+    }
+
+    input {
+        border: none;
+        border-bottom: 1px solid #999;
+        outline: none;
+    }
+
+    .us {
+        margin-top: 10px;
+    }
+
+    .us span {
+        font-size: 14px;
+    }
+
+    .list {
+        margin: 10px 0;
+        border-bottom: 1px solid #EFEFEF;
+    }
+    .others{
+       display: block;
+        margin-bottom: 20px;
+    }
+
+    .list li {
+        height: 34px;
+        line-height: 34px;
+        padding-left: 30px;
+        font-size: 14px;
+        font-family: "微软雅黑";
+        cursor: pointer;
+        position: relative;
+    }
+    .list .inLis{
+        height: 68px;
+    }
+    .list li .choose {
+        border-radius: 50%;
+        position: absolute;
+        left: 0px;
+        top: 8px;
+        width: 18px;
+        height: 18px;
+        border: 1px solid #B5B5B5;
+    }
+
+    .list li .choosed {
+        border: 5px solid #3367D6;
+    }
+
+    .btn {
+        width: 80px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        background: #3367D6;
+        border-radius: 4px;
+        color: #FFFFFF;
+        margin: 10px auto;
+        cursor: pointer;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 40px;
+        text-align: center;
+    }
+    .warning {
+        color: red;
+    }
+
+    .others {
+        margin-left: 20px;
+    }
+</style>
+
+<body>
+<div id="box">
+    <h3>痘博士调查问卷</h3>
+    <div class="us"><span>姓名：</span><input type="text" name="" id="username" value="" placeholder="输入姓名"/></div>
+    <div class="us"><span>性别：</span><input type="text" name="" id="sex" value="" placeholder="输入性别（“男”或“女”"/></div>
+    <div class="us"><span>年龄：</span><input type="text" name="" id="age" value="" placeholder="输入年龄（6-60）"/></div>
+    <ul>
+        <li class="list">
+            <h4>1.您的职业是？</h4>
+            <ul>
+                <li>
+                    <div class="choose"></div>
+                    A. <span>学生</span></li>
+                <li>
+                    <div class="choose"></div>
+                    B.<span>公司职员</span></li>
+                <li>
+                    <div class="choose"></div>
+                    C.<span>自由职业者</span></li>
+                <li>
+                    <div class="choose"></div>
+                    D.<span>事业单位</span></li>
+                <li>
+                    <div class="choose"></div>
+                    E.<span>医务人员</span></li>
+                <li>
+                    <div class="choose"></div>
+                    F.<span>公务员</span></li>
+                <li class="inLis">
+                    <div class="choose"></div>
+                    G.<span>其他</span><input type="text" class="others" name="" id="" value="" placeholder="输入其他值"/></li>
+            </ul>
+        </li>
+        <li class="list">
+            <h4>2.您平时使用手机app吗？</h4>
+            <ul>
+                <li>
+                    <div class="choose"></div>
+                    A.<span>经常使用</span></li>
+                <li>
+                    <div class="choose"></div>
+                    B.<span>偶尔使用</span></li>
+                <li>
+                    <div class="choose"></div>
+                    C.<span>不使用</span></li>
+            </ul>
+        </li>
+        <li class="list">
+            <h4>3.您的智能手机是什么系统？</h4>
+            <ul>
+                <li>
+                    <div class="choose"></div>
+                    A.<span>Ios</span></li>
+                <li>
+                    <div class="choose"></div>
+                    B.<span>安卓</span></li>
+                <li>
+                    <div class="choose"></div>
+                    C.<span>Windows mobil</span></li>
+                <li>
+                    <div class="choose"></div>
+                    D.<span>塞班</span></li>
+                <li>
+                    <div class="choose"></div>
+                    E.<span>其他</span></li>
+            </ul>
+        </li>
+        <li class="list">
+            <h4>4.您会网购祛痘产品吗？</h4>
+            <ul>
+                <li>
+                    <div class="choose"></div>
+                    A.<span>经常需要</span></li>
+                <li>
+                    <div class="choose"></div>
+                    B.<span>偶尔需要</span></li>
+                <li>
+                    <div class="choose"></div>
+                    C.<span>有需求购买</span></li>
+                <li>
+                    <div class="choose"></div>
+                    D.<span>从不需要</span></li>
+            </ul>
+        </li>
+        <li class="list">
+            <h4>5.您平时每月进行几次祛痘？</h4>
+            <ul>
+                <li>
+                    <div class="choose"></div>
+                    A.<span>1-2次</span></li>
+                <li>
+                    <div class="choose"></div>
+                    B.<span>3-4次</span></li>
+                <li>
+                    <div class="choose"></div>
+                    C.<span>5次以上</span></li>
+                <li>
+                    <div class="choose"></div>
+                    D.<span>不进行</span></li>
+            </ul>
+        </li>
+        <li class="list">
+            <h4>6.您认为您皮肤面临的问题是什么？</h4>
+            <ul>
+                <li>
+                    <div class="choose"></div>
+                    A.<span>干燥无光泽</span></li>
+                <li>
+                    <div class="choose"></div>
+                    B.<span>粉刺痘痘多</span></li>
+                <li>
+                    <div class="choose"></div>
+                    C.<span>出现皱纹</span></li>
+                <li>
+                    <div class="choose"></div>
+                    D.<span>皮肤松弛无弹性</span></li>
+                <li>
+                    <div class="choose"></div>
+                    E.<span>有眼袋及黑眼圈</span></li>
+                <li>
+                    <div class="choose"></div>
+                    F.<span>夏天出油较多</span></li>
+                <li class="inLis otherS">
+                    <div class="choose"></div>
+                    G.<span>其他</span><input type="text" class="others" name="" id="" value="" placeholder="输入其他值"/></li>
+            </ul>
+        </li>
+        <li class="list">
+            <h4>
+                <div class="choose"></div>
+                7.您最常使用什么祛痘app产品？
+            </h4>
+            <ul>
+                <li>
+                    <div class="choose"></div>
+                    A.<span>痘博士</span></li>
+                <li>
+                    <div class="choose"></div>
+                    B.<span>皮肤宝</span></li>
+                <li>
+                    <div class="choose"></div>
+                    C.<span>肌肤管家</span></li>
+                <li>
+                    <div class="choose"></div>
+                    D.<span>播美</span></li>
+                <li>
+                    <div class="choose"></div>
+                    E.<span>打痘痘</span></li>
+                <li>
+                    <div class="choose"></div>
+                    F.<span>不使用</span></li>
+                <li class="inLis otherS">
+                    <div class="choose"></div>
+                    G.<span>其它</span><input type="text" class="others" name="" id="" placeholder="输入其他值" value=""/></li>
+            </ul>
+        </li>
+        <li class="list">
+            <h4>8.您为什么使用该祛痘应用？</h4>
+            <ul>
+                <li>
+                    <div class="choose"></div>
+                    A.<span>应用界面设计好看</span></li>
+                <li>
+                    <div class="choose"></div>
+                    B.<span>应用操作舒适</span></li>
+                <li>
+                    <div class="choose"></div>
+                    C.<span>应用分类清晰，能快速找到资源</span></li>
+                <li>
+                    <div class="choose"></div>
+                    D.<span>一开始就使用，习惯了</span></li>
+                <li>
+                    <div class="choose"></div>
+                    E.<span>祛痘效果特别好</span></li>
+            </ul>
+        </li>
+        <li class="list">
+            <h4>9.您觉得当先祛痘软件最大的问题是什么？</h4>
+            <ul>
+                <li>
+                    <div class="choose"></div>
+                    A.<span>耗流量</span></li>
+                <li>
+                    <div class="choose"></div>
+                    B.<span>占用内存大</span></li>
+                <li>
+                    <div class="choose"></div>
+                    C.<span>广告多</span></li>
+                <li>
+                    <div class="choose"></div>
+                    D.<span>个人信息不安全</span></li>
+                <li>
+                    <div class="choose"></div>
+                    E.<span>祛痘效果不显著</span></li>
+                <li>
+                    <div class="choose"></div>
+                    F.<span>专家回答问题过慢</span></li>
+            </ul>
+        </li>
+        <li class="list">
+            <h4>10．您每月用于祛痘产品的消费金额是多少？</h4>
+            <ul>
+                <li>
+                    <div class="choose"></div>
+                    A.<span>200元以内</span></li>
+                <li>
+                    <div class="choose"></div>
+                    B.<span>200-1000元</span></li>
+                <li>
+                    <div class="choose"></div>
+                    C.<span>1000-2000元</span></li>
+                <li>
+                    <div class="choose"></div>
+                    D.<span>2000元以上</span></li>
+            </ul>
+        </li>
+        <li class="list">
+            <h4>11.您觉得痘博士的宣传力度怎么样？</h4>
+            <ul>
+                <li>
+                    <div class="choose"></div>
+                    A.<span>强</span></li>
+                <li>
+                    <div class="choose"></div>
+                    B.<span>较强</span></li>
+                <li>
+                    <div class="choose"></div>
+                    C.<span>一半</span></li>
+                <li>
+                    <div class="choose"></div>
+                    D.<span>较弱</span></li>
+                <li>
+                    <div class="choose"></div>
+                    E.<span>弱</span></li>
+            </ul>
+        </li>
+        <li class="list">
+            <h4>12.您认为痘博士最大的优势是什么？</h4>
+            <ul>
+                <li>
+                    <div class="choose"></div>
+                    A. <span>质量有保证</span></li>
+                <li>
+                    <div class="choose"></div>
+                    B.<span>使用后效果比较好</span></li>
+                <li>
+                    <div class="choose"></div>
+                    C.<span>不清楚</span></li>
+                <li class="inLis otherS">
+                    <div class="choose"></div>
+                    D.<span>其他</span><input type="text" class="others" name="" placeholder="输入其他值" value=""/></li>
+            </ul>
+        </li>
+        <li class="list">
+            <h4>13.您最喜欢的促销方式是什么？</h4>
+            <ul>
+                <li>
+                    <div class="choose"></div>
+                    A.<span>打折</span></li>
+                <li>
+                    <div class="choose"></div>
+                    B.<span>积分送礼物</span></li>
+                <li>
+                    <div class="choose"></div>
+                    C.<span>赠送优惠券</span></li>
+                <li>
+                    <div class="choose"></div>
+                    D.<span>其他</span></li>
+            </ul>
+        </li>
+        <li class="list">
+            <h4>14.您通过那种渠道了解到痘博士的产品？</h4>
+            <ul>
+                <li>
+                    <div class="choose"></div>
+                    A.<span>电视广告</span></li>
+                <li>
+                    <div class="choose"></div>
+                    B.<span>报纸杂志广告</span></li>
+                <li>
+                    <div class="choose"></div>
+                    C.<span>朋友推荐</span></li>
+                <li>
+                    <div class="choose"></div>
+                    D.<span>网站</span></li>
+                <li>
+                    <div class="choose"></div>
+                    E.<span>其他</span></li>
+            </ul>
+        </li>
+        <li class="list">
+            <h4>15.我们痘博士app应该怎样改进？</h4>
+            <ul>
+                <li>
+                    <div class="choose"></div>
+                    A.<span>增加更有趣的功能点</span></li>
+                <li>
+                    <div class="choose"></div>
+                    B.<span>产品界面设计更新颖美观</span></li>
+                <li>
+                    <div class="choose"></div>
+                    C.<span>推出活动进行促销</span></li>
+                <li class="inLis otherS">
+                    <div class="choose"></div>
+                    D.<span>其他</span><input type="text" class="others" name="" placeholder="输入其他值" value=""/></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="btn">提交</div>
+    <p class="warning"></p>
+    <p>真心的感谢您的配合与帮助！</p>
+</div>
+</body>
 </html>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
-<script  type="text/javascript" charset="utf-8">
-	$(function() {
-		var username, age, sex;
-		var data = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
-		$("#username").on("focusout", function() {
-			username = $(this).val();
-		});
-		$("#sex").on("focusout", function() {
-			sex = $(this).val();
-		});
-		$("#age").on("focusout", function() {
-			age = $(this).val();
-		})
-		$(".others").on("focusout", function() {
-		var newData = [];
-		var self = $(this);
-		$(this).parent().find("span").text($(this).val()).end().end().val("");
-		data.forEach(function(v, i) {
-			if(i == self.parent().parent().parent().index()) {
-				newData.push(self.parent().find("span").text())
-			} else {
-				newData.push(v)
-			}
-			data = newData
-		})
-	})
-		$(".list li").on("click", function() {
-			$(this).parent().find(".choose").removeClass("choosed").end().end().find(".choose").addClass("choosed");
-			var newData = [];
-			var self = $(this);
-			data.forEach(function(v, i) {
-				if(i == self.parent().parent().index()) {
-					newData.push(self.find("span").text())
-				} else {
-					newData.push(v)
-				}
-				data = newData
-			})
-		})
+<script type="text/javascript" charset="utf-8">
+    $(function () {
+        var username, age, sex;
+        var data = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+        $("#username").on("focusout", function () {
+            username = $(this).val();
+        });
+        $("#sex").on("focusout", function () {
+            sex = $(this).val();
+            isSex(sex)
+        });
+        function isSex(sexs) {
+            if (sexs == "男" || sexs == "女") {
+                console.log("OK")
+                return true;
+            } else {
+                alert("性别请填写“男”或“女”")
+                return false;
+            }
+        }
+        function isAge(ages) {
+            var reg = /^[1-9]+[0-9]*]*$/
+            if (!reg.test(ages)) {
+                alert("年龄请输入6-60的数字")
+                return false;
+            } else {
+                if ((5 < ages) && (ages < 61)) {
+                    console.log("OK")
+                    return true;
+                } else {
+                    alert("年龄请输入6-60的数字")
+                    return false;
+                }
+            }
+        }
+        $("#age").on("focusout", function () {
+            age = $(this).val();
+            isAge(age)
+        })
+        $(".others").on("focusout", function (event) {
+            event.stopPropagation();
+            var otherData=$(this).val();
+                var newData = [];
+                var self = $(this);
+                $(this).parent().find("span").text($(this).val()).end().end().val("");
+                data.forEach(function (v, i) {
+                    if (i == self.parent().parent().parent().index()) {
+                        var newObj = {}
+                        if (self.parent().index() == 0) {
+                            newObj.key = "A";
+                            newObj.answer = self.find("span").text()
+                        } else if (self.parent().index() == 1) {
+                            newObj.key = "B";
+                            newObj.answer = self.parent().find("span").text()
+                        } else if (self.parent().index() == 2) {
+                            newObj.key = "C";
+                            newObj.answer = self.parent().find("span").text()
+                        } else if (self.parent().index() == 3) {
+                            newObj.key = "D";
+                            newObj.answer = self.parent().find("span").text()
+                        } else if (self.parent().index() == 4) {
+                            newObj.key = "E";
+                            newObj.answer = self.parent().find("span").text()
+                        } else if (self.index() == 5) {
+                            newObj.key = "F";
+                            newObj.answer = self.parent().find("span").text()
+                        } else if (self.parent().index() == 6) {
+                            newObj.key = "G";
+                            newObj.answer = self.parent().find("span").text()
+                        }
+                        newData.push(newObj)
+                    } else {
+                        newData.push(v)
+                    }
+                    data = newData
+                })
+        })
+        $(".others").on("click",false)
+        $(".list li").on("click", function (event) {
+            event.stopPropagation()
+            $(this).parent().find(".choose").removeClass("choosed").end().end().find(".choose").addClass("choosed");
+            var newData = [];
+            var self = $(this);
+            // if($(this).hasClass("inLis")){
+            //     alert("请填写其他的值")
+            // }
+                data.forEach(function (v, i) {
+                    if (i == self.parent().parent().index()) {
+                        var newObj = {}
+                        if (self.index() == 0) {
+                            newObj.key = "A"
+                            newObj.answer = self.find("span").text()
+                        } else if (self.index() == 1) {
+                            newObj.key = "B"
+                            newObj.answer = self.find("span").text()
+                        } else if (self.index() == 2) {
+                            newObj.key = "C"
+                            newObj.answer = self.find("span").text()
+                        } else if (self.index() == 3) {
+                            newObj.key = "D"
+                            newObj.answer = self.find("span").text()
+                        } else if (self.index() == 4) {
+                            newObj.key = "E"
+                            newObj.answer = self.find("span").text()
+                        } else if (self.index() == 5) {
+                            newObj.key = "F"
+                            newObj.answer = self.find("span").text()
+                        } else if (self.index() == 6) {
+                            newObj.key = "G"
+                            newObj.answer = self.find("span").text()
+                        }
+                        newData.push(newObj)
+                    } else {
+                        newData.push(v)
+                    }
+                    data = newData
+                })
 
-		//	提交
-		$(".btn").on("click", function() {
-			$(".warning").text("");
-			var falg = true;
-			if(!username || !age || !sex) {
-				$(".warning").text("*请完善个人信息");
-				alert("*请完善个人信息")
-			} else {
-				data.forEach(function(v, i) {
-					if(v == 1) {
-						falg = false;
-						$(".warning").text("*您有题未作答完成")
-						alert("*您有题未作答完成")
-					}
-				})
-				if(falg) {
-					var res = data.join(",");
-					// console.log(username, age, sex);
-					// console.log(res);
-					$.ajax({
-						url: '',
-						type: 'post',
-						data: {
-							username: username,
-							age: age,
-							sex: sex,
-							data:res
-						},
-						success: function(res) {
-							console.log(res);
-							alert("真心的感谢您的配合与帮助!")
-						},
-						fail: function(e) {
-							console.log(res)
+
+        })
+
+        //	提交
+        $(".btn").on("click", function () {
+            $(".warning").text("");
+            var falg = true;
+            if (!username || !age || !sex) {
+                $(".warning").text("*请完善个人信息");
+                alert("请完善个人信息")
+            } else if( isAge(age)&&(isSex(sex))){
+                data.every(function (v, i) {
+                    if (v == 1) {
+                        falg = false;
+                        $(".warning").text("*第"+(i+1)+"题您未作答完成")
+                        alert("第"+(i+1)+"题您未作答完成")
+                        return false
+                    }else if(i==0||i==5||i==11||i==14){
+                        if((v.answer=="其他")||v.answer==""){
+                            alert("第"+(i+1)+"题其他的值未填写");
+                            falg = false;
+                            return false
+                        }
+                    }
+                    return true
+                })
+                if (falg) {
+                    var res = data;
+                    // console.log(username, age, sex);
+                    console.log(res);
+                    return
+                    $.ajax({
+                        url: '',
+                        type: 'post',
+                        data: {
+                            username: username,
+                            age: age,
+                            sex: sex,
+                            data: res
+                        },
+                        success: function (res) {
+                            console.log(res);
+                            alert("真心的感谢您的配合与帮助!")
+                        },
+                        fail: function (e) {
+                            console.log(res)
                             alert("网络请求失败，请稍后重试!")
-						}
-					})
-				}
-			}
-		})
-	})
+                        }
+                    })
+                }
+            }
+        })
+    })
 </script>
